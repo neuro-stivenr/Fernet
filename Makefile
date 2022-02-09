@@ -11,7 +11,7 @@ env:
 fernet.sh:
 	@echo '#!/bin/sh' > fernet.sh
 	@echo '' >> fernet.sh
-	@echo "$(REPODIR)/env/bin/python $(REPODIR)/fernet.py" >> fernet.sh
+	@echo $(REPODIR)/env/bin/python $(REPODIR)/fernet.py \"$$\@\"  >> fernet.sh
 
 .PHONY: clean
 clean:
